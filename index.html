@@ -9,34 +9,38 @@
 </head>
 <body>
     <header>
-        <h1 id="title">QonyrAulieasmaziri</h1>
-        <div class="language-selector">
+        <h1>QonyrAulieasmaziri</h1>
+        <nav>
             <button onclick="changeLanguage('kk')">Қазақша</button>
             <button onclick="changeLanguage('ru')">Русский</button>
             <button onclick="changeLanguage('en')">English</button>
-        </div>
+        </nav>
     </header>
-
+    
     <main>
-        <section class="menu-section">
-            <div class="menu-item" onclick="showMenu('breakfast')">
-                <img src="images/breakfast.jpg" alt="Таңғы ас">
-                <h2 id="breakfast-title">Таңғы ас | Завтрак | Breakfast</h2>
-            </div>
-            <div class="menu-item" onclick="showMenu('lunch')">
-                <img src="images/lunch.jpg" alt="Түскі ас">
-                <h2 id="lunch-title">Түскі ас | Обед | Lunch</h2>
-            </div>
-            <div class="menu-item" onclick="showMenu('dinner')">
-                <img src="images/dinner.jpg" alt="Кешкі ас">
-                <h2 id="dinner-title">Кешкі ас | Ужин | Dinner</h2>
-            </div>
-        </section>
+        <div class="menu-item" onclick="openMenu('breakfast')">
+            <img src="images/breakfast.jpg" alt="Breakfast">
+            <h2 data-lang="breakfast">Таңғы ас</h2>
+        </div>
 
-        <section id="menu-details" class="hidden">
-            <button onclick="closeMenu()">X</button>
-            <div id="menu-content"></div>
-        </section>
+        <div class="menu-item" onclick="openMenu('lunch')">
+            <img src="images/lunch.jpg" alt="Lunch">
+            <h2 data-lang="lunch">Түскі ас</h2>
+        </div>
+
+        <div class="menu-item" onclick="openMenu('dinner')">
+            <img src="images/dinner.jpg" alt="Dinner">
+            <h2 data-lang="dinner">Кешкі ас</h2>
+        </div>
     </main>
+
+    <div id="menu-popup" class="hidden">
+        <div class="menu-content">
+            <span class="close-btn" onclick="closeMenu()">&times;</span>
+            <h2 id="menu-title"></h2>
+            <p id="menu-description"></p>
+        </div>
+    </div>
+
 </body>
 </html>
