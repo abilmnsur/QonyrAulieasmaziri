@@ -9,39 +9,33 @@
 </head>
 <body>
     <header>
-        <h1>QonyrAulieasmaziri</h1>
-        <nav>
-            <ul>
-                <li><a href="#breakfast">Таңғы ас | Завтрак | Breakfast</a></li>
-                <li><a href="#lunch">Түскі ас | Обед | Lunch</a></li>
-                <li><a href="#dinner">Кешкі ас | Ужин | Dinner</a></li>
-            </ul>
-        </nav>
+        <h1 id="title">QonyrAulieasmaziri</h1>
+        <div class="language-selector">
+            <button onclick="changeLanguage('kk')">Қазақша</button>
+            <button onclick="changeLanguage('ru')">Русский</button>
+            <button onclick="changeLanguage('en')">English</button>
+        </div>
     </header>
-    
+
     <main>
-        <section id="breakfast">
-            <h2>Таңғы ас | Завтрак | Breakfast</h2>
-            <div class="menu-item">
-                <img src="images/oatmeal.jpg" alt="Овсяная каша">
-                <p>Овсяная каша - 1700 тг</p>
+        <section class="menu-section">
+            <div class="menu-item" onclick="showMenu('breakfast')">
+                <img src="images/breakfast.jpg" alt="Таңғы ас">
+                <h2 id="breakfast-title">Таңғы ас | Завтрак | Breakfast</h2>
+            </div>
+            <div class="menu-item" onclick="showMenu('lunch')">
+                <img src="images/lunch.jpg" alt="Түскі ас">
+                <h2 id="lunch-title">Түскі ас | Обед | Lunch</h2>
+            </div>
+            <div class="menu-item" onclick="showMenu('dinner')">
+                <img src="images/dinner.jpg" alt="Кешкі ас">
+                <h2 id="dinner-title">Кешкі ас | Ужин | Dinner</h2>
             </div>
         </section>
 
-        <section id="lunch">
-            <h2>Түскі ас | Обед | Lunch</h2>
-            <div class="menu-item">
-                <img src="images/noodle_soup.jpg" alt="Суп-лапша">
-                <p>Суп-лапша - 1090 тг</p>
-            </div>
-        </section>
-
-        <section id="dinner">
-            <h2>Кешкі ас | Ужин | Dinner</h2>
-            <div class="menu-item">
-                <img src="images/cutlet_rice.jpg" alt="Котлета с рисом">
-                <p>Котлета с рисом - 1180 тг</p>
-            </div>
+        <section id="menu-details" class="hidden">
+            <button onclick="closeMenu()">X</button>
+            <div id="menu-content"></div>
         </section>
     </main>
 </body>
