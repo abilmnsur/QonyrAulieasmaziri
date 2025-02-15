@@ -1,13 +1,13 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f8f4e3;
+    background-color: #f5f5dc;
 }
 
 header {
-    background-color: #8b5a2b;
+    background-color: #8b4513;
     color: white;
-    padding: 10px 0;
+    padding: 20px;
 }
 
 nav ul {
